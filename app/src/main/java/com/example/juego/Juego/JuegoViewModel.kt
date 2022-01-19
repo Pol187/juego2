@@ -18,7 +18,7 @@ class JuegoViewModel : ViewModel() {
     private lateinit var palabras: MutableList<String>
     fun Cargar_palabras(texto_adivina: TextView): String {
         palabras = mutableListOf(
-            "Minar",
+            "minar",
             /*"Chismoso",
             "Inhalar",
             "Linda",
@@ -35,7 +35,7 @@ class JuegoViewModel : ViewModel() {
         var i: Int = 0
 
         while (i < random.length) {
-            random_escondida += "_ "
+            random_escondida += "_"
             i++
         }
         texto_adivina.setText(random_escondida)
@@ -53,13 +53,13 @@ class JuegoViewModel : ViewModel() {
         var sb:String=""
         val charArray = oldString.toCharArray()
 
-        while (index < palabra.length) {
+        while (index <palabra.length) {
             if (palabra[index].toString() == letra) {
                 charArray[index] = letra[0]
 
 
             }
-            index++
+            index=index+1
         }
         newString = String(charArray)
         textView5.setText(newString)
