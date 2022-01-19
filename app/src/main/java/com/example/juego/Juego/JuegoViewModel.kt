@@ -59,7 +59,7 @@ class JuegoViewModel : ViewModel() {
 
 
             }
-            index=index+1
+            index++
         }
         newString = String(charArray)
         textView5.setText(newString)
