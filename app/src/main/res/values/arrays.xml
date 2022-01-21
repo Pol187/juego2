@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="game_level_entries">
+        <item>Starter</item>
+        <item>Medium</item>
+        <item>Difficult</item>
+    </string-array>
 
-    <string-array name="palabras">
-        <item>mesa</item>
-        <item>teclado</item>
-        <item>raton</item>
-        <item>clase</item>
-        <item>armario</item>
+    <string-array name="game_level_values">
+        <item>15</item>
+        <item>10</item>
+        <item>5</item>
     </string-array>
 </resources>

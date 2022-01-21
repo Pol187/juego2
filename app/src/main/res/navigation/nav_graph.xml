@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_menu_to_juego"
             app:destination="@id/juego" />
+        <action
+            android:id="@+id/action_menu_to_settingsActivity2"
+            app:destination="@id/settingsActivity2" />
     </fragment>
     <fragment
         android:id="@+id/juego"
@@ -28,6 +31,15 @@
         android:label="Final" >
         <action
             android:id="@+id/action_final1_to_juego"
-            app:destination="@id/juego" />
+            app:destination="@id/juego"
+            />
+        <argument
+            android:name="myArg"
+            app:argType="integer"
+            android:defaultValue="1" />
     </fragment>
+    <activity
+        android:id="@+id/settingsActivity2"
+        android:name="com.example.juego.settings.SettingsActivity"
+        android:label="SettingsActivity" />
 </navigation>

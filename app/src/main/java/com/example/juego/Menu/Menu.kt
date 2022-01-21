@@ -24,7 +24,7 @@ class Menu : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding= DataBindingUtil.inflate<MenuFragmentBinding>(inflater, R.layout.menu_fragment,container,false)
+        binding= MenuFragmentBinding.inflate(inflater)
         return  binding.root
     }
 
@@ -35,7 +35,9 @@ class Menu : Fragment() {
         binding.buttonStart.setOnClickListener {
             viewModel.juego(view)
         }
-
+        binding.buttonSettings.setOnClickListener(){
+            viewModel.settings(view)
+        }
     }
 
 }

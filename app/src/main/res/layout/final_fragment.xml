@@ -14,10 +14,11 @@
         tools:context=".Final.Final">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/button_final"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="Hello"
+            android:layout_height="104dp"
+            android:textAlignment="center"
+            android:textSize="34sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.preference.PreferenceManager
 import com.example.juego.R
+import com.example.juego.databinding.FinalFragmentBinding
 import com.example.juego.databinding.JuegoFragmentBinding
 
 class Juego : Fragment() {
@@ -20,19 +22,23 @@ class Juego : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding= DataBindingUtil.inflate<JuegoFragmentBinding>(inflater, R.layout.juego_fragment,container,false)
+        binding= JuegoFragmentBinding.inflate(inflater)
         return  binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel=ViewModelProvider(this).get(JuegoViewModel::class.java)
+        val pref = PreferenceManager.getDefaultSharedPreferences(context)
+        val numero: String? = pref.getString("level","")
+        var intentos:String=numero.toString()
 
+        binding.textViewIntentos.setText(intentos)
         val palabra:String=viewModel.Cargar_palabras(binding.textView5)
-      binding.button.setOnClickListener{
+         binding.button.setOnClickListener{
           Toast.makeText(requireContext(), "", Toast.LENGTH_SHORT).show()
-            viewModel.adivina(binding.textoAdivina, palabra,binding.textView5)
-        }
+            viewModel.adivina(binding.textoAdivina, palabra,binding.textView5,binding.textViewIntentos,view)
+            }
 
     }
 

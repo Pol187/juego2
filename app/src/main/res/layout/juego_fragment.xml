@@ -17,12 +17,12 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="118dp"
+            android:layout_marginBottom="24dp"
             android:text="@string/Adivina"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/texto_adivina"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/texto_adivina" />
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <TextView
             android:id="@+id/textView2"
@@ -55,10 +55,10 @@
             android:id="@+id/textView5"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="94dp"
+            android:layout_marginBottom="22dp"
             android:textAlignment="center"
             android:textSize="34sp"
-            app:layout_constraintBottom_toTopOf="@+id/texto_adivina"
+            app:layout_constraintBottom_toTopOf="@+id/button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView_intentos" />
@@ -67,22 +67,15 @@
             android:id="@+id/texto_adivina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="139dp"
+            android:layout_marginBottom="305dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:textAlignment="center"
-            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/button"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
-        <TextView
-            android:id="@+id/comprovar"
-            android:layout_width="86dp"
-            android:layout_height="20dp"
-            tools:layout_editor_absoluteX="164dp"
-            tools:layout_editor_absoluteY="323dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
