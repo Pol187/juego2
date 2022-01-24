@@ -17,79 +17,77 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/Adivina"
-            app:layout_constraintBottom_toTopOf="@+id/texto_adivina"
-            app:layout_constraintEnd_toEndOf="@+id/texto_adivina"
-            app:layout_constraintStart_toStartOf="@+id/texto_adivina"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/texto_adivina"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="11dp"
-            android:layout_marginEnd="108dp"
-            android:layout_marginBottom="13dp"
+            android:layout_width="141dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="357dp"
+            android:layout_marginBottom="9dp"
             android:text="@string/Intentos"
             android:textAlignment="center"
             android:textSize="34sp"
             app:layout_constraintBottom_toTopOf="@+id/textView_intentos"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/button_settings"
-            app:layout_constraintTop_toTopOf="@+id/button_settings" />
+            app:layout_constraintEnd_toStartOf="@+id/button"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView_intentos"
             android:layout_width="51dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="49dp"
+            android:layout_marginBottom="264dp"
             android:text="5"
             android:textAlignment="center"
             android:textSize="34sp"
-            app:layout_constraintBottom_toTopOf="@+id/textView5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_settings" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="22dp"
+            android:layout_marginEnd="125dp"
             android:textAlignment="center"
             android:textSize="34sp"
-            app:layout_constraintBottom_toTopOf="@+id/button"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/button_settings"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_intentos" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/texto_adivina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="305dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="69dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:textAlignment="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button"
+            app:layout_constraintEnd_toStartOf="@+id/button"
+            app:layout_constraintStart_toEndOf="@+id/button_settings"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/button_settings"
-            android:layout_width="78dp"
+            android:layout_width="0dp"
             android:layout_height="35dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="9dp"
-            android:layout_marginBottom="56dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="254dp"
             android:text="@string/general"
             android:textSize="8sp"
-            app:layout_constraintBottom_toTopOf="@+id/textView_intentos"
-            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintEnd_toStartOf="@+id/texto_adivina"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

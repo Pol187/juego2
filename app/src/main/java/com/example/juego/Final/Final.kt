@@ -3,19 +3,14 @@ package com.example.juego.Final
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
-import androidx.navigation.fragment.navArgs
-import com.example.juego.Juego.Juego
 import com.example.juego.R
 
 import com.example.juego.databinding.FinalFragmentBinding
-import com.example.juego.databinding.JuegoFragmentBinding
 
 
 class Final : Fragment() {
@@ -36,10 +31,11 @@ class Final : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel=ViewModelProvider(this).get(FinalViewModel::class.java)
 
-        val tv = view.findViewById<TextView>(R.id.button_final)
+        val tv = view.findViewById<TextView>(R.id.textView_final)
         tv.text = arguments?.getString("final")
-
-
+        binding.botonFinal.setOnClickListener{
+            viewModel.juego(view)
+        }
 
     }
 

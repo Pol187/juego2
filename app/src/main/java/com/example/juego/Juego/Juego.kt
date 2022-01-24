@@ -39,6 +39,9 @@ class Juego : Fragment() {
           Toast.makeText(requireContext(), "", Toast.LENGTH_SHORT).show()
             viewModel.adivina(binding.textoAdivina, palabra,binding.textView5,binding.textViewIntentos,view)
             }
+        binding.buttonSettings.setOnClickListener{
+            viewModel.settings(view)
+        }
 
     }
 

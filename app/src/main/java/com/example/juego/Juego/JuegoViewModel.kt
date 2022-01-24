@@ -15,6 +15,9 @@ import java.util.*
 
 
 class JuegoViewModel : ViewModel() {
+    fun settings(view: View){
+        view.findNavController().navigate(R.id.settingsActivity2)
+    }
 //https://wordsapiv1.p.mashape.com/words/example
     private lateinit var palabras: MutableList<String>
     fun Cargar_palabras(texto_adivina: TextView): String {
