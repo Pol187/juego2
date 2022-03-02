@@ -9,6 +9,7 @@ import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.juego.R
+import com.example.juego.databinding.JuegoFragmentBinding
 
 import java.util.*
 
@@ -46,7 +47,14 @@ class JuegoViewModel : ViewModel() {
         return random
     }
 
-     fun adivina(letra: EditText, palabra: String, textView5: TextView, textViewIntentos: TextView, view: View){
+     fun adivina(
+         letra: EditText,
+         palabra: String,
+         textView5: TextView,
+         textViewIntentos: TextView,
+         view: View,
+         binding: JuegoFragmentBinding
+     ){
 
         var letra= letra.text.toString()
         var intento=textViewIntentos.text.toString().toInt()
@@ -61,32 +69,24 @@ class JuegoViewModel : ViewModel() {
             }
             index++
         }
-
         if(!verif){
             intento--
         }
+         binding.textoAdivina.setText("")
+         var resultado =""
+         if(intento==0){
+             resultado="YOU LOSE"
+             val bundle = bundleOf("final" to resultado,)
+             view.findNavController().navigate(R.id.final1, bundle)
+         }else if(palabra==oldString){
 
-    comprovar(intento, view, textView5, textViewIntentos, palabra, oldString)
+             resultado="YOU WIN"
+             val bundle = bundleOf("final" to resultado,)
+             view.findNavController().navigate(R.id.final1, bundle)
+         }else {
+             textView5.setText(oldString)
+             textViewIntentos.setText(intento.toString())
+         }
     }
-    fun comprovar(intento: Int, view: View, textView5: TextView,
-                  textViewIntentos: TextView, palabra: String,
-                  oldString: String) {
 
-       var nombre =""
-        if(intento==0){
-         //   result ="You Lose"
-            nombre="YOU LOSE"
-            val bundle = bundleOf("final" to nombre,)
-            view.findNavController().navigate(R.id.final1, bundle)
-        }else if(palabra==oldString){
-       //     val action = JuegoDirections.actionJuegoToFinal1(nombre)
-         //   view.findNavController().navigate(action)
-            nombre="YOU WIN"
-            val bundle = bundleOf("final" to nombre,)
-            view.findNavController().navigate(R.id.final1, bundle)
-        }else {
-            textView5.setText(oldString)
-            textViewIntentos.setText(intento.toString())
-        }
-    }
 }

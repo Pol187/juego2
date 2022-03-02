@@ -33,11 +33,9 @@ class Juego : Fragment() {
         val palabra:String=viewModel.Cargar_palabras(binding.textView5)
         binding.button.setOnClickListener{
           Toast.makeText(requireContext(), "", Toast.LENGTH_SHORT).show()
-            viewModel.adivina(binding.textoAdivina, palabra,binding.textView5,binding.textViewIntentos,view)
+            viewModel.adivina(binding.textoAdivina, palabra,binding.textView5,binding.textViewIntentos,view,binding)
             }
-        binding.buttonSettings.setOnClickListener{
-            viewModel.settings(view)
-        }
+
 
     }
 }
